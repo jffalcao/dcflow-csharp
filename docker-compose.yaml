@@ -1,0 +1,14 @@
+version: '3'
+services:
+  csharp:
+    container_name: csharp
+    image: jfrflabs/csharp:1.0.0
+    build: .
+    working_dir: /wspace
+    entrypoint: /bin/sh
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/wspace
+    ports:
+      - 5000:5000
